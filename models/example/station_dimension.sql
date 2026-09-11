@@ -1,0 +1,11 @@
+WITH STATION AS(
+SELECT 
+CITYNAME AS STATION,
+LAT AS STATION_LATITUDE,
+LON AS STATION_LONGITUDE
+ from
+{{ source('demo_source', 'WEATHER') }}
+
+)
+
+select * from STATION
